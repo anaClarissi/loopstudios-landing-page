@@ -204,19 +204,41 @@ body {
 }
 
 .card {
+    position: relative;
     align-items: flex-start;
     justify-content: flex-end;
     padding: 1rem;
     border-radius: 0;
     border: none;
     background-size: cover;
+    max-width: 350px;
+    max-height: 400px;
+    color: var(--white);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
 }
 
-.card .title {
+.card:hover,
+.card:focus {
+    color: var(--black);
+}
+
+.card:hover::after,
+.card:focus::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#creations .card .title {
     max-width: 50%;
     text-align: left !important;
-    font-size: 1.5rem !important;
-    color: var(--white);
+    font-size: 1.5rem;
+    z-index: 1050;
 }
 
 .btn-see-all {
@@ -227,10 +249,17 @@ body {
     letter-spacing: 0.35rem;
     border: 2px solid var(--black);
     background-color: var(--white);
+    transition: all .2s ease-in-out;
 }
 
 .btn-see-all.mobile {
     width: 50%;
+}
+
+.btn-see-all:hover,
+.btn-see-all:focus {
+    background-color: var(--black);
+    color: var(--white);
 }
 
 
@@ -350,5 +379,87 @@ body {
     }
 
 
+
+    /*==================
+            MAIN
+    ==================*/
+    
+    #main {
+        padding: 8rem 0;
+        gap: 10rem;
+    }
+
+    #main section .container {
+        gap: 5rem;
+    }
+
+    #main section .title {
+        font-size: 3rem;
+    }
+
+
+    /*==================
+            HOME
+    ==================*/
+
+    #home .container {
+        min-height: 30rem;
+        flex-direction: row !important;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-top: 8rem;
+        background: var(--white) url('../images/desktop/image-interactive.jpg') no-repeat left top;
+        background-size: 60%;
+    }
+
+    #home img {
+        display: none;
+    }
+
+    #main #home .title {
+        text-align: left;
+    }
+
+    #main #home p {
+        text-align: left;
+    }
+
+    #home .content {
+        width: 50%;
+        padding: 6rem 0 0 6rem;
+        background-color: var(--white);
+    }
+
+
+
+    /*==================
+          CREATIONS
+    ==================*/
+
+    #creations .content {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .creations-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 45vh);
+        gap: 2rem;
+    } 
+
+    #creations .card .title {
+        max-width: 90%;
+        font-size: 2rem;
+    }
+
+    .btn-see-all.mobile {
+        display: none;
+    }
+
+    .btn-see-all.desktop {
+        max-width: 10rem;
+    }
 
 }
