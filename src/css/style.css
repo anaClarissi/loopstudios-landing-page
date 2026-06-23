@@ -344,7 +344,7 @@ body {
         color: var(--white);
     }
 
-    #header .nav-link::after {
+    .nav-link::after {
         content: "";
         position: absolute;
         bottom: 0;
@@ -356,12 +356,12 @@ body {
         transition: background-color .2s ease-in-out;
     }
 
-    #header .nav-link:hover::after {
+    .nav-link:hover::after {
         background-color: var(--white);
     }
 
-    #header .nav-link:hover,
-    #header .nav-link:focus {
+    .nav-link:hover,
+    .nav-link:focus {
         border-color: none;
     }
 
@@ -460,6 +460,35 @@ body {
 
     .btn-see-all.desktop {
         max-width: 10rem;
+    }
+
+
+
+    /*==================
+           FOOTER
+    ==================*/
+
+    #footer .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #footer-logo {
+        max-width: 10rem;
+    }
+
+    #footer .navbar-nav {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    #footer .nav-link {
+        font-size: 1rem;
+        position: relative;
+    }
+
+    .secondary-content .nav-link i {
+        font-size: 2rem;
     }
 
 }
