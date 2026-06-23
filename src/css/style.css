@@ -1,0 +1,41 @@
+/*==================
+      VARIABLES
+==================*/
+
+:root {
+
+    --white: #ffffff;
+    --black: #000000;
+    --grey-200: #d9d9d9;
+
+    --font-primary: 'Josefin Sans', sans-serif;
+    --font-secondary: 'Alata', Helvetica;
+
+}
+
+
+
+/*==================
+        BODY
+==================*/
+
+.title {
+    font-family: var(--font-secondary);
+    font-weight: 400 !important;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: var(--font-primary);
+    font-size: 0.9375rem;
+    font-weight: 300;
+}
